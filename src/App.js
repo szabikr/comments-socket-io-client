@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './App.css';
 import socketIOClient from "socket.io-client";
 
 const endpoint = 'http://127.0.0.1:4001';
@@ -33,16 +34,21 @@ function App() {
   };
 
   return(
-    <div>
+    <div className="App-header">
       <div>
-        Comments:
+        <h1>Gearbox Model</h1>
+        <h2>Comments:</h2>
         {comments.map((comment, index) => (
           <p key={index}>{comment}</p>
         ))}
       </div>
-      <div>
-        <input type="text" value={comment} onChange={onCommentChange}></input>
-        <button onClick={submitComment}>Submit</button>
+      <div className="comment-wrapper">
+        <div>
+          <textarea rows="6" cols="50" value={comment} onChange={onCommentChange}></textarea>
+        </div>
+        <div>
+          <button onClick={submitComment}>Submit</button>
+        </div>
       </div>
     </div>
   );

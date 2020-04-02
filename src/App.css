@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+.comment-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+textarea {
+  margin-right: 24px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #FFFFFF;
+  width: 120px;
+  height: 48px;
+  border: none;
+
+  font-size: 16px;
+  color: #5390AA;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
